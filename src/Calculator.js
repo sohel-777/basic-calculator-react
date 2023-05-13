@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
 const Calculator = () => {
+    //state variables for storing data 
     const [num1, setNum1] = useState('');
     const [num2, setNum2] = useState('');
     const [result, setResult] = useState('');
     const [error, setError] = useState('');
 
-
+//function to validate input fields
     const validateInputs = () => {
         if (num1 === "") {
             setError('Error :  Num1 cannot be empty');
@@ -29,7 +30,7 @@ const Calculator = () => {
         return true;
     };
 
-
+//function to calculate result
     const handleOperation = (operation) => {
         if (validateInputs()) {
             const number1 = parseFloat(num1);
